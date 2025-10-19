@@ -1,0 +1,150 @@
+.hero {
+  width: 100%;
+  min-height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #04080c;
+  color: #ffffff;
+  text-align: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+  background: radial-gradient(circle at top, rgba(63, 127, 191, 0.15), transparent 70%), #04080c;
+
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #9bbcdd;
+  margin-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -1px;
+  margin-bottom: 10px;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.hero-role {
+  font-size: 1.6rem;
+  color: #3f7fbf;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-family: 'Space Grotesk', sans-serif;
+  
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: #bcbfc4;
+  margin-bottom: 40px;
+  line-height: 1.5;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(63, 127, 191, 0.6);
+}
+
+
+.hero-btn {
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-transform: none;
+  cursor: pointer;
+}
+
+.hero-btn.primary {
+  background: linear-gradient(90deg, #3f7fbf 0%, #9bbcdd 100%);
+  box-shadow: 0 0 10px rgba(63, 127, 191, 0.3);
+  color: #fff;
+}
+
+.hero-btn.primary:hover {
+  box-shadow: 0 0 15px rgba(63, 127, 191, 0.5);
+}
+
+.hero-btn.secondary {
+  border: 1px solid #3f7fbf;
+  color: #9bbcdd;
+}
+
+.hero-btn.secondary:hover {
+  background-color: #3f7fbf;
+  color: #ffffff;
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  color: #9bbcdd;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  cursor: default;
+}
+
+.mouse {
+  width: 26px;
+  height: 42px;
+  border: 2px solid #9bbcdd;
+  border-radius: 16px;
+  position: relative;
+  margin-top: 8px;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background-color: #9bbcdd;
+  border-radius: 4px;
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: scroll-wheel 1.5s infinite ease-in-out;
+}
+
+@keyframes scroll-wheel {
+  0% { opacity: 0; transform: translate(-50%, 0); }
+  50% { opacity: 1; transform: translate(-50%, 8px); }
+  100% { opacity: 0; transform: translate(-50%, 0); }
+}
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-role {
+    font-size: 1.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
